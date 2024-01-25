@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>SMK NEGERI 53 Jakarta</title>
+  <meta http-equiv="expires" content="-1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="jquery/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <!-- Custom CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+<!-- Background responsive -->
+<style type="text/css">
+    body {
+    background-image: url(img/small-bg.jpg);
+    background-size: cover;
+}
+@media only screen and (min-device-width: 500px){
+    body{
+        background-image: url(img/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+    </style>
+</head>
+<body>
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+
+<div class="navbar-default navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand"style="color: #fff href="login.html">SMKN 53 Jakarta</a>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="login.html">Login <span class="sr-only">(current)</span></a></li>
+                <li><a href="status.html">Status</a></li>
+                <li><a href="paket.html">Paket</a></li>
+                <li><a href="about.html">Tentang Hotspot</a></li>
+                <li><a href="service.html">Layanan</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="logout.html?erase-cookie=true">Logout</a></li>
+            </ul>   
+        </div>
+    </div>
+</div>
+
+</br></br></br>
+
+<div class="container"> 
+<div id="wrapper">
+    <div id="page-content-wrapper">
+      <div class="container-fluid">                         
+        <div class="row" style="margin-bottom: 15px; margin-top: 10px;">       <!--panel -->
+            <div class="panel-body" style="background-color: white; border: 1px solid #ddd; border-radius: 4px;">
+            <center>
+                <div class="alert alert-info" style="padding: 1px;"><h3>SMKN 53 Jakarta</h3></div>
+            </center>
+    
+    <div class="col-md-6 col-sm-12">
+        <div class="row">
+            $(if error)
+            <div class="alert alert-danger">Terjadi kesalahan: $(error)</div>
+            $(endif)
+
+          <div class="alert alert-success">Selamat Datang di Layanan SMKN 53 Hotspot. </br> Silahkan login dulu untuk menikmati akses layanan internet berbasis hotspot.</div>
+ <div class="alert alert-danger"> Belum punya akun Hub administator untuk mendapatkan akun</div>
+        </div>
+
+        <div class="row">            
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form id="loginForm" class="form-horizontal" role="form" action="$(link-login-only)" method="post">
+                        <input type="hidden" name="dst" value="$(link-orig)"/>
+                        <input type="hidden" name="popup" value="true"/>
+                        <div class="form-group">
+                            <label for="inputLogin" class="col-sm-2 control-label">Username</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-lg" id="inputLogin" name="username" value="$(username)"
+                                           placeholder="Username" autofocus required>
+                                </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+                                <div class="col-sm-10">
+                                  <input type="password" class="form-control input-lg" id="inputPassword" name="password" placeholder="Password" required>
+                                </div>
+                        </div>                           
+                        
+ 
+
+
+
+                        </br>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-0 col-sm-12">
+                                <button type="submit" class="btn btn-success btn-block btn-lg">LOGIN</button>
+                            </div>
+                        </div>
+						$(if trial == 'yes')  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#myModal">FREE INTERNET</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">FREE INTERNET</h4>
+        </div>
+        <div class="modal-body">
+          <p>
+			Nikmati internet gratis? Free trial available, <a style="color: #FF8080"href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">KLIK DISIN</a>. Kecepatan internet terbatas
+		Silahkan login untuk mendapatkan internet tercepat dan unlimetd</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+$(endif)
+                        <center>
+                            <div  class="alert alert-success">Gunakan Internet Dengan Bijak !
+                                <div style="color: #a1c1c1; font-size: 10px">Powered by MikroTik RouterOS</div>
+                            </div>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="row">
+    <div class="col-md-6 col-sm-12">
+        <div class="panel panel-default" style="margin-bottom: 10px;">
+            <div class="panel-body">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="img/1.jpg" alt="Ical RedHat" style="width:100%; border-radius: 4px;">
+                            <div class="carousel-caption">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+
+                    <div class="item">
+                        <img src="img/2.jpg" alt="Ical RedHat" style="width:100%; border-radius: 4px;">
+                            <div class="carousel-caption">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+    
+                    <div class="item">
+                        <img src="img/3.jpg" alt="Ical RedHat" style="width:100%; border-radius: 4px;">
+                            <div class="carousel-caption">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="card hovercard">
+                <!--<div class="cardheader"></div> -->
+                                   
+                    <div class="info">
+                    <div class="title">
+                    <font color=#31708f>SMKN 53 Jakarta</font>
+
+                    <div class="desc">jl. dharma wanita IV rt.10 rw.01 kel.rawa buaya kec.cengkareng</div>
+                    <div class="desc">Telephone:0895424027670  Kode Pos: 17740</div>
+                    <div class="desc">Website :WWW.smkn53jkt.sch.id</div>
+                    <div class="desc">Support by : zura.net</div>
+                        <!--<div class="desc"><blink>IP Address : $(ip)</div>-->
+                        
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+$(if chap-id)
+    <script type="text/javascript" src="md5.js"></script>
+    <script type="text/javascript">
+        $('#loginForm').submit(function () {
+            var password = $('#inputPassword');
+            password.val(hexMD5('$(chap-id)' + password.val() + '$(chap-challenge)'));
+        });
+    </script>
+$(endif)
+
+<footer class="pagelayer-footer"><div pagelayer-id="lt915" class="p-lt915 pagelayer-post_props">
+</div>
+<div pagelayer-id="9ai9703" class="p-9ai9703 pagelayer-row pagelayer-row-stretch-auto pagelayer-height-default">
+<style pagelayer-style-id="9ai9703">.p-9ai9703 .pagelayer-col-holder{padding: 10px}
+.p-9ai9703 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
+.p-9ai9703 .pagelayer-svg-top .pagelayer-shape-fill{fill:#227bc3}
+.p-9ai9703 .pagelayer-row-svg .pagelayer-svg-top{width:100%;height:100px}
+.p-9ai9703 .pagelayer-svg-bottom .pagelayer-shape-fill{fill:#e44993}
+.p-9ai9703 .pagelayer-row-svg .pagelayer-svg-bottom{width:100%;height:100px}
+.p-9ai9703{background: #101010;padding-top: 30px; padding-right: 0px; padding-bottom: 40px; padding-left: 0px}
+</style>
+			
+			
+			
+			
+			<div class="pagelayer-row-holder pagelayer-row pagelayer-auto pagelayer-width-auto">
+<div pagelayer-id="62t3547" class="p-62t3547 pagelayer-col pagelayer-col-4">
+<style pagelayer-style-id="62t3547">.p-62t3547 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
+.p-62t3547 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
+</style>
+				
+				
+				
+				<div class="pagelayer-col-holder">
+<div pagelayer-id="jgs7449" class="p-jgs7449 pagelayer-wp_title">
+<style pagelayer-style-id="jgs7449">.p-jgs7449 .pagelayer-wp-title-heading{font-family: ; font-size: 30px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style: Solid !important; line-height: em !important; text-transform: Capitalize !important; letter-spacing: px !important; word-spacing: px !important;color:#6200ea;text-align:left;padding: 0px 0px 0px 0px}
+</style><div class="pagelayer-wp-title-content">
+			<div class="pagelayer-wp-title-section">
+				<a href="https://www.smkn53jkt.sch.id" class="pagelayer-wp-title-link pagelayer-ele-link">
+					
+					<div class="pagelayer-wp-title-holder">
+						<div class="pagelayer-wp-title-heading">SMKN 53 JAKARTA</div>
+						
+					</div>
+				</a>
+			</div>			
+		<div></div></div></div>
+<div pagelayer-id="r1r8613" class="p-r1r8613 pagelayer-text">
+<style pagelayer-style-id="r1r8613">.p-r1r8613 .pagelayer-text-holder p{font-family:noto sans; font-weight:500; line-height:2; color:#ffffff;}
+</style><div class="pagelayer-text-holder"><p>SEPUTAR PROGRAM KEAHLIAN SMKN 53 JAKARTA</p><p>Terdiri dari 6 Program Keahlian :</p><p>1. Teknik Instalasi Tenaga Listrik</p><p>2. Teknik Pengelasan</p><p>3. Teknik Kendaraan Ringan Otomotif</p><p>4. Teknik Bisnis dan Sepeda Motor</p><p>5. Teknik Audio Video</p><p>6. Teknik Komputer dan Jaringan</p></div></div>
+<div pagelayer-id="cnx9598" class="p-cnx9598 pagelayer-social_grp pagelayer-social-shape-circle">
+<style pagelayer-style-id="cnx9598">.p-cnx9598 i{height:1em; width:1em; position: absolute; top: 50%; left: 50%; transform: translate(-50% , -50%)}
+.p-cnx9598 .pagelayer-icon-holder{position: relative; min-height: 1em; min-width: 1em;padding: calc(0.5em + 10px);font-size: 16px;background-color: #6200ea !important;-webkit-transition: all 400ms; transition: all 400ms}
+.p-cnx9598{text-align: left;margin-top: 10px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px}
+.p-cnx9598 > div{display: inline-block}
+.p-cnx9598 .pagelayer-social{padding: 3px}
+.p-cnx9598 .pagelayer-social-fa{font-size: 16px;color: #ffffff !important;-webkit-transition: all 400ms; transition: all 400ms}
+.p-cnx9598 .pagelayer-icon-holder:hover .pagelayer-social-fa{color: #6200ea !important}
+.p-cnx9598 .pagelayer-icon-holder:hover{background-color: #ffffff !important}
+</style>
+<div pagelayer-id="4wl3699" class="p-4wl3699 pagelayer-social">
+<div class="pagelayer-icon-holder pagelayer-facebook-f" data-icon="fab fa-facebook-f">
+					<a class="pagelayer-ele-link" href="https://www.facebook.com/smkn53official">
+						<i class="pagelayer-social-fa fab fa-facebook-f"></i>
+					</a>
+				</div></div>
+<div pagelayer-id="pb05054" class="p-pb05054 pagelayer-social">
+<div class="pagelayer-icon-holder pagelayer-instagram" data-icon="fab fa-instagram">
+					<a class="pagelayer-ele-link" href="https://instagram.com/smkn53jkt.official?igshid=YmMyMTA2M2Y=">
+						<i class="pagelayer-social-fa fab fa-instagram"></i>
+					</a>
+				</div></div>
+<div pagelayer-id="lro5508" class="p-lro5508 pagelayer-social">
+<div class="pagelayer-icon-holder pagelayer-youtube" data-icon="fab fa-youtube">
+					<a class="pagelayer-ele-link" href="https://youtube.com/@smkn53jkt.official">
+						<i class="pagelayer-social-fa fab fa-youtube"></i>
+					</a>
+				</div></div>
+</div>
+</div></div>
+
+<!--
+</div></div></div></div></div></div></div>
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">Powered by MikroTik RouterOS</p>
+    </div>
+</div>
+-->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+    });
+</script>
+	<script type="text/javascript">
+	<!--
+		document.login.username.focus();
+	//-->
+	</script>
+    </body>
+</html>
